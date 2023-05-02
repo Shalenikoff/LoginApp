@@ -9,14 +9,22 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    
+    //MARK: Outlets
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var emojiLabel: UILabel!
     
+    var userName: String!
+    
+    //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        let emojiLabel = "\u{2665}"
+        emojiLabel.text = "\u{2665}"
+        welcomeUserLabel.text = "Welcome, \(userName!)"
     }
     
-
+    //MARK: Actions
+    @IBAction func logOutButton() {
+        dismiss(animated: true)
+    }
+    
 }

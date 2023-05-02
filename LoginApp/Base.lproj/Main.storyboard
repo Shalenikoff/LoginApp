@@ -73,6 +73,9 @@
                             <constraint firstItem="aUM-zN-yOF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v9Z-eU-Sxb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Y5H-Vm-1EI" kind="presentation" id="ORe-r7-kHd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,11 +86,11 @@
             <objects>
                 <viewController id="Y5H-Vm-1EI" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FQN-JQ-CiF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-SK-8iV">
-                                <rect key="frame" x="134.5" y="200" width="106.5" height="30"/>
+                                <rect key="frame" x="134" y="200" width="107" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -96,9 +99,12 @@
                                 <rect key="frame" x="146.5" y="470.5" width="82" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Log out"/>
+                                <connections>
+                                    <action selector="logOutButton" destination="Y5H-Vm-1EI" eventType="touchUpInside" id="ZnM-DG-UdG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ry4-rG-igX">
-                                <rect key="frame" x="167" y="250" width="41.5" height="20.5"/>
+                                <rect key="frame" x="167" y="250" width="41" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
