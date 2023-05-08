@@ -20,6 +20,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         emojiLabel.text = "\u{2665}"
         welcomeUserLabel.text = "Welcome, \(userName!)"
+        
     }
     
     //MARK: Actions
