@@ -23,11 +23,11 @@ class LoginViewController: UIViewController {
     
     // MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = userNameField.text
     }
     
     // MARK: Actions
-    
     @IBAction func forgotNameButton() {
         showAlert(with: "Forgot your name?", and: "Your name is SWIFTBOOK")
     }
@@ -36,6 +36,9 @@ class LoginViewController: UIViewController {
         showAlert(with: "OOPS, you forgot your password!", and: "Try to make numbers from 1 till 5")
     }
     
+    @IBAction func logInButton() {
+        performSegue(withIdentifier: "showSecondView", sender: nil)
+    }
 }
 
 // MARK: UIAlertCOntrollers

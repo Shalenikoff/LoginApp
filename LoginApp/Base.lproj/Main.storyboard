@@ -38,6 +38,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log in">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYo-ji-ao4"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="iE1-tT-4oR">
                                 <rect key="frame" x="15" y="345.5" width="345" height="32"/>
@@ -82,7 +85,7 @@
                     <connections>
                         <outlet property="passwordField" destination="RrP-hk-TmB" id="zBh-zp-tmh"/>
                         <outlet property="userNameField" destination="eUs-08-Lst" id="jew-By-PIt"/>
-                        <segue destination="Y5H-Vm-1EI" kind="presentation" id="ORe-r7-kHd"/>
+                        <segue destination="Y5H-Vm-1EI" kind="presentation" identifier="showSecondView" id="ORe-r7-kHd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
