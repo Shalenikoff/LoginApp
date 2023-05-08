@@ -37,7 +37,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInButton() {
-        performSegue(withIdentifier: "showSecondView", sender: nil)
+        if userNameField.text == "SWIFTBOOK" && passwordField.text == "12345" {
+            performSegue(withIdentifier: "showSecondView", sender: nil)
+        } else {
+            showAlert(with: "OOOPS, uncorrect Username or Passord", and: "Please, try again")
+        }
     }
 }
 
