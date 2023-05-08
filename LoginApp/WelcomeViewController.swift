@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController {
     
     var userName: String!
     
-    //MARK: viewDidLoad
+    //MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         emojiLabel.text = "\u{2665}"
