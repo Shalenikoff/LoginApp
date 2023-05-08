@@ -39,7 +39,7 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYo-ji-ao4"/>
+                                    <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcb-tC-ymm"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="iE1-tT-4oR">

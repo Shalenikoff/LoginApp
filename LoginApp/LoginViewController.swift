@@ -18,7 +18,11 @@ class LoginViewController: UIViewController {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     // MARK: Segue
@@ -33,14 +37,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordButton() {
-        showAlert(with: "OOPS, you forgot your password!", and: "Try to make numbers from 1 till 5")
+        showAlert(with: "Forgot your password?", and: "Try to spell numbers from 1 till 5")
     }
     
     @IBAction func logInButton() {
         if userNameField.text == "SWIFTBOOK" && passwordField.text == "12345" {
             performSegue(withIdentifier: "showSecondView", sender: nil)
         } else {
-            showAlert(with: "OOOPS, uncorrect Username or Passord", and: "Please, try again")
+            showAlert(with: "OOOPS, incorrect Username or Passord", and: "Please, try again")
         }
     }
 }
