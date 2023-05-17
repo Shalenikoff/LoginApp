@@ -85,7 +85,7 @@
                     <connections>
                         <outlet property="passwordField" destination="RrP-hk-TmB" id="zBh-zp-tmh"/>
                         <outlet property="userNameField" destination="eUs-08-Lst" id="jew-By-PIt"/>
-                        <segue destination="Y5H-Vm-1EI" kind="presentation" identifier="showSecondView" id="ORe-r7-kHd"/>
+                        <segue destination="Y5H-Vm-1EI" kind="presentation" identifier="showSecondView" modalPresentationStyle="fullScreen" id="ORe-r7-kHd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,10 +97,10 @@
             <objects>
                 <viewController id="Y5H-Vm-1EI" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FQN-JQ-CiF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-SK-8iV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-SK-8iV">
                                 <rect key="frame" x="134" y="200" width="107" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -112,6 +112,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Log out"/>
                                 <connections>
                                     <action selector="logOutButton" destination="Y5H-Vm-1EI" eventType="touchUpInside" id="ZnM-DG-UdG"/>
+                                    <segue destination="scU-pl-ZsF" kind="unwind" unwindAction="unwindSegueWithSegue:" id="7pE-f1-aHo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ry4-rG-igX">
@@ -138,6 +139,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6t-6O-OYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="scU-pl-ZsF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="933.60000000000002" y="2.2488755622188905"/>
         </scene>

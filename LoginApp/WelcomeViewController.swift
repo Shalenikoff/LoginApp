@@ -8,7 +8,7 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
     //MARK: Outlets
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var emojiLabel: UILabel!
@@ -21,10 +21,4 @@ class WelcomeViewController: UIViewController {
         emojiLabel.text = "\u{2665}"
         welcomeUserLabel.text = "Welcome, \(userName!)"
     }
-    
-    //MARK: Actions
-    @IBAction func logOutButton() {
-        dismiss(animated: true)
-    }
-    
 }
