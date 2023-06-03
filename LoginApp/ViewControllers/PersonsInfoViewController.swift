@@ -9,21 +9,17 @@ import UIKit
 
 class PersonsInfoViewController: UIViewController {
 
+    
+    //MARK: Outlets
+    @IBOutlet var personsWorkLabel: UILabel!
+    @IBOutlet var personsSkillsLabel: UILabel!
+    
+    //MARK: Lifecycle
+    private let users = User.getPersonsInfo()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        personsWorkLabel.text = users.userPersonInfo.personsWork
+        personsSkillsLabel.text = users.userPersonInfo.personsSkills
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -17,14 +17,8 @@ final class LoginViewController: UIViewController {
     
     // MARK: Lifecycle
     
-    private let userName = "SWIFTBOOK"
-    private let userPassword = "12345"
-    
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //    } - Данный метод никак не переопределяется и пустой, поэтому можно его вообше убрать
-    
-    // Метод для скрытия клавиатуры тапом по экрану
+    private let users = User.getPersonsInfo()
+ 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -44,15 +38,15 @@ final class LoginViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func forgotNameButton() {
-        showAlert(with: "Forgot your name?", and: "Your name is \(userName)")
+        showAlert(with: "Forgot your name?", and: "Your name is \(users.userName)")
     }
     
     @IBAction func forgotPasswordButton() {
-        showAlert(with: "Forgot your password?", and: "Try \(userPassword)")
+        showAlert(with: "Forgot your password?", and: "Try \(users.userPassword)")
     }
     
     @IBAction func logInButton() {
-        if userNameField.text == userName && passwordField.text == userPassword {
+        if userNameField.text == users.userName && passwordField.text == users.userPassword {
             performSegue(withIdentifier: "showSecondView", sender: nil)
         } else {
             showAlert(with: "OOOPS, incorrect Username or Passord", and: "Please, try again")

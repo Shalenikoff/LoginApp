@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="3.1484257871064472"/>
+            <point key="canvasLocation" x="78" y="2"/>
         </scene>
         <!--Home-->
         <scene sceneID="Ggd-l5-05R">
@@ -197,7 +197,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mic-vX-0Xo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.77513759387732584" blue="0.19565606386618684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Mic-vX-0Xo" firstAttribute="trailing" secondItem="qbh-vc-TJI" secondAttribute="trailing" constant="20" id="AuO-nK-NKc"/>
                             <constraint firstItem="rda-1f-Sp5" firstAttribute="top" secondItem="Mic-vX-0Xo" secondAttribute="top" constant="20" id="HMp-Sk-qhg"/>
@@ -212,6 +212,13 @@
                     <navigationItem key="navigationItem" title="UserName" largeTitleDisplayMode="always" id="jjj-yn-1iY">
                         <barButtonItem key="backBarButtonItem" title="Profile" id="7B2-N1-o0P"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="personsAgeLabel" destination="wXY-fy-uUn" id="OUz-Nz-ZaI"/>
+                        <outlet property="personsDiscription" destination="qbh-vc-TJI" id="bKC-tx-ntw"/>
+                        <outlet property="personsImageView" destination="6Vu-sA-eKB" id="Zjm-r9-1la"/>
+                        <outlet property="personsNameLabel" destination="y6s-Zz-Znx" id="ndl-8Z-G8I"/>
+                        <outlet property="personsSurnameLabel" destination="8cW-qy-keu" id="M7q-Wo-yBg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2o4-K9-E6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -251,7 +258,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EfG-Ky-OLO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="rmQ-rg-des" firstAttribute="leading" secondItem="EfG-Ky-OLO" secondAttribute="leading" constant="20" id="3b7-af-HfD"/>
                             <constraint firstItem="l02-DD-QcY" firstAttribute="top" secondItem="EfG-Ky-OLO" secondAttribute="top" constant="20" id="J1L-NV-RwI"/>
@@ -266,6 +273,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Work and skills" id="UeY-Xa-aLu"/>
+                    <connections>
+                        <outlet property="personsSkillsLabel" destination="cCI-ZJ-aa9" id="knV-tE-2Gb"/>
+                        <outlet property="personsWorkLabel" destination="3En-Zl-eGl" id="fcd-8p-9w4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSx-nF-3jM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -277,6 +288,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Mot-wc-axC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ewr-yG-Qp7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
