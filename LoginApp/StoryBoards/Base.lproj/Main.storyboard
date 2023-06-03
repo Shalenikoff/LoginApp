@@ -180,6 +180,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="5ug-0B-fLE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Vu-sA-eKB" secondAttribute="trailing" id="T1H-44-7Uh"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discription" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbh-vc-TJI">
                                 <rect key="frame" x="20" y="323.5" width="335" height="20.5"/>
@@ -205,6 +208,7 @@
                             <constraint firstItem="rda-1f-Sp5" firstAttribute="leading" secondItem="Mic-vX-0Xo" secondAttribute="leading" constant="20" id="dsy-rp-LwK"/>
                             <constraint firstItem="qbh-vc-TJI" firstAttribute="top" secondItem="rda-1f-Sp5" secondAttribute="bottom" constant="40" id="i1e-kt-aaI"/>
                             <constraint firstItem="Mic-vX-0Xo" firstAttribute="bottom" secondItem="fZe-Ee-iZV" secondAttribute="bottom" constant="40" id="pLY-qq-FDR"/>
+                            <constraint firstItem="fZe-Ee-iZV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qbh-vc-TJI" secondAttribute="bottom" id="v9H-5S-UPm"/>
                             <constraint firstItem="Mic-vX-0Xo" firstAttribute="trailing" secondItem="rda-1f-Sp5" secondAttribute="trailing" constant="20" id="wjh-1f-exg"/>
                             <constraint firstItem="fZe-Ee-iZV" firstAttribute="centerX" secondItem="T1E-1r-awL" secondAttribute="centerX" id="x4c-ds-a4H"/>
                         </constraints>
@@ -232,44 +236,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l02-DD-QcY">
-                                <rect key="frame" x="20" y="116" width="57" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3En-Zl-eGl">
-                                <rect key="frame" x="20" y="156" width="335" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmQ-rg-des">
-                                <rect key="frame" x="20" y="517.5" width="56" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCI-ZJ-aa9">
-                                <rect key="frame" x="20" y="557.5" width="335" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u3q-Ce-tyl">
+                                <rect key="frame" x="20" y="116" width="335" height="60.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l02-DD-QcY">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3En-Zl-eGl">
+                                        <rect key="frame" x="0.0" y="40" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Mq-1r-tuD">
+                                <rect key="frame" x="20" y="196.5" width="335" height="60.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmQ-rg-des">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCI-ZJ-aa9">
+                                        <rect key="frame" x="0.0" y="40" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EfG-Ky-OLO"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="rmQ-rg-des" firstAttribute="leading" secondItem="EfG-Ky-OLO" secondAttribute="leading" constant="20" id="3b7-af-HfD"/>
-                            <constraint firstItem="l02-DD-QcY" firstAttribute="top" secondItem="EfG-Ky-OLO" secondAttribute="top" constant="20" id="J1L-NV-RwI"/>
-                            <constraint firstItem="3En-Zl-eGl" firstAttribute="top" secondItem="l02-DD-QcY" secondAttribute="bottom" constant="10" id="N2l-G3-R2d"/>
-                            <constraint firstItem="cCI-ZJ-aa9" firstAttribute="top" secondItem="rmQ-rg-des" secondAttribute="bottom" constant="10" id="NrA-We-ZPr"/>
-                            <constraint firstItem="EfG-Ky-OLO" firstAttribute="bottom" secondItem="cCI-ZJ-aa9" secondAttribute="bottom" constant="40" id="OxY-TW-YMe"/>
-                            <constraint firstItem="cCI-ZJ-aa9" firstAttribute="leading" secondItem="EfG-Ky-OLO" secondAttribute="leading" constant="20" id="POp-Sq-ude"/>
-                            <constraint firstItem="EfG-Ky-OLO" firstAttribute="trailing" secondItem="3En-Zl-eGl" secondAttribute="trailing" constant="20" id="PiX-op-Q3R"/>
-                            <constraint firstItem="3En-Zl-eGl" firstAttribute="leading" secondItem="EfG-Ky-OLO" secondAttribute="leading" constant="20" id="StK-pn-vRX"/>
-                            <constraint firstItem="EfG-Ky-OLO" firstAttribute="trailing" secondItem="cCI-ZJ-aa9" secondAttribute="trailing" constant="20" id="cuJ-Yw-RYo"/>
-                            <constraint firstItem="l02-DD-QcY" firstAttribute="leading" secondItem="EfG-Ky-OLO" secondAttribute="leading" constant="20" id="xwE-yQ-t99"/>
+                            <constraint firstItem="EfG-Ky-OLO" firstAttribute="trailing" secondItem="u3q-Ce-tyl" secondAttribute="trailing" constant="20" id="KQF-jV-GlS"/>
+                            <constraint firstItem="1Mq-1r-tuD" firstAttribute="leading" secondItem="EfG-Ky-OLO" secondAttribute="leading" constant="20" id="cWB-X1-r2n"/>
+                            <constraint firstItem="EfG-Ky-OLO" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1Mq-1r-tuD" secondAttribute="bottom" constant="30" id="cmu-Uw-JHQ"/>
+                            <constraint firstItem="u3q-Ce-tyl" firstAttribute="leading" secondItem="EfG-Ky-OLO" secondAttribute="leading" constant="20" id="uSn-Us-WmQ"/>
+                            <constraint firstItem="EfG-Ky-OLO" firstAttribute="trailing" secondItem="1Mq-1r-tuD" secondAttribute="trailing" constant="20" id="xla-YZ-ciU"/>
+                            <constraint firstItem="u3q-Ce-tyl" firstAttribute="top" secondItem="EfG-Ky-OLO" secondAttribute="top" constant="20" id="zW6-cs-isB"/>
+                            <constraint firstItem="1Mq-1r-tuD" firstAttribute="top" secondItem="u3q-Ce-tyl" secondAttribute="bottom" constant="20" id="zm2-hK-bs4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Work and skills" id="UeY-Xa-aLu"/>

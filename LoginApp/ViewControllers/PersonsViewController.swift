@@ -28,6 +28,6 @@ class PersonsViewController: UIViewController {
         personsAgeLabel.text = users.userPersonInfo.personsAge
         personsDiscription.text = users.userPersonInfo.personsDiscription
         //personsImageView.image = UIImage(named: users.userPersonInfo.personsImage)
-       
+        
     }
 }
