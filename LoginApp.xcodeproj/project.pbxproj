@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B4C16BE2A2B792800E79523 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C16BD2A2B792800E79523 /* User.swift */; };
+		2B8747CD2A2BF16C003CDD1E /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8747CC2A2BF16C003CDD1E /* PersonsViewController.swift */; };
+		2B8747CF2A2BF18B003CDD1E /* PersonsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8747CE2A2BF18B003CDD1E /* PersonsInfoViewController.swift */; };
 		2BB468EC29F93159000AF7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB468EB29F93159000AF7BC /* AppDelegate.swift */; };
 		2BB468EE29F93159000AF7BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB468ED29F93159000AF7BC /* SceneDelegate.swift */; };
 		2BB468F029F93159000AF7BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB468EF29F93159000AF7BC /* LoginViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		2B4C16BD2A2B792800E79523 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2B8747CC2A2BF16C003CDD1E /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
+		2B8747CE2A2BF18B003CDD1E /* PersonsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsInfoViewController.swift; sourceTree = "<group>"; };
 		2BB468E829F93159000AF7BC /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB468EB29F93159000AF7BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BB468ED29F93159000AF7BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +50,8 @@
 			children = (
 				2BB468FF29F931F5000AF7BC /* WelcomeViewController.swift */,
 				2BB468EF29F93159000AF7BC /* LoginViewController.swift */,
+				2B8747CC2A2BF16C003CDD1E /* PersonsViewController.swift */,
+				2B8747CE2A2BF18B003CDD1E /* PersonsInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,8 +185,10 @@
 				2B4C16BE2A2B792800E79523 /* User.swift in Sources */,
 				2BB468F029F93159000AF7BC /* LoginViewController.swift in Sources */,
 				2BB4690029F931F5000AF7BC /* WelcomeViewController.swift in Sources */,
+				2B8747CD2A2BF16C003CDD1E /* PersonsViewController.swift in Sources */,
 				2BB468EC29F93159000AF7BC /* AppDelegate.swift in Sources */,
 				2BB468EE29F93159000AF7BC /* SceneDelegate.swift in Sources */,
+				2B8747CF2A2BF18B003CDD1E /* PersonsInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
