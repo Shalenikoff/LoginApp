@@ -53,7 +53,7 @@ final class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindSegue(segue:UIStoryboardSegue) {
+    @IBAction func unwindSegueToLoginView(segue:UIStoryboardSegue) {
         userNameField.text = ""
         passwordField.text = ""
     }

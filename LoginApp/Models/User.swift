@@ -19,7 +19,7 @@ struct User {
                                        personSurname: "School",
                                        personsAge: "9",
                                        personsImage: "Swift",
-                                       personsDiscription: "The most intresting and effective online school of swift programming language. It's has got the №1 community and the №1 educational programm for anyone, who want to be a real professional on swift",
+                                       personsDiscription: "The most intresting and effective online school of swift programming language. It has got the №1 community and the №1 educational programm for anyone, who want to be a real professional on swift",
                                        personsSkills: "We can learn how to programm in iOS, macOS, iPadOS",
                                        personsWork: "In breafcase of swiftbook there are: \n 1) Junior educational programm \n 2) Middle educational programm \n 3) Courses on various topics \n 4) personal forum \n 5) iOS Incubator \n 6) Beautiful web-site with documentation")
         )
