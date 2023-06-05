@@ -15,11 +15,11 @@ class PersonsInfoViewController: UIViewController {
     @IBOutlet var personsSkillsLabel: UILabel!
     
     //MARK: Lifecycle
-    private let users = User.getPersonsInfo()
+    var user = User.getPersonsInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        personsWorkLabel.text = users.userPersonInfo.personsWork
-        personsSkillsLabel.text = users.userPersonInfo.personsSkills
+        personsWorkLabel.text = user.personsInfo.work
+        personsSkillsLabel.text = user.personsInfo.skills
     }
 }

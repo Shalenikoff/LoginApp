@@ -19,15 +19,20 @@ class PersonsViewController: UIViewController {
     
     //MARK: Lifecycle
     
-    private let users = User.getPersonsInfo()
+    var user = User.getPersonsInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        personsNameLabel.text = users.userPersonInfo.personName
-        personsSurnameLabel.text = users.userPersonInfo.personSurname
-        personsAgeLabel.text = users.userPersonInfo.personsAge
-        personsDiscription.text = users.userPersonInfo.personsDiscription
-        personsImageView.image = UIImage(named: users.userPersonInfo.personsImage)
-        
+        personsNameLabel.text = user.personsInfo.name
+        personsSurnameLabel.text = user.personsInfo.surname
+        personsAgeLabel.text = user.personsInfo.age
+        personsDiscription.text = user.personsInfo.discription
+        personsImageView.image = UIImage(named: user.personsInfo.image)
+        title = user.personsInfo.fullName
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let personsIVC = segue.destination as? PersonsInfoViewController else { return }
+        personsIVC.user = user
     }
 }

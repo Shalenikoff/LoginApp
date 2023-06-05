@@ -14,10 +14,9 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
-    
     // MARK: Lifecycle
     
-    private let users = User.getPersonsInfo()
+    private let user = User.getPersonsInfo()
  
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -27,26 +26,30 @@ final class LoginViewController: UIViewController {
     // MARK: Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBar = segue.destination as? UITabBarController else { return }
-        guard let viewControllers = tabBar.viewControllers else { return }
-        viewControllers.forEach { viewController in
-            if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = userNameField.text
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                guard let personsVC = navigationVC.topViewController as? PersonsViewController else { return }
+                personsVC.user = user
             }
         }
     }
     
     // MARK: Actions
     @IBAction func forgotNameButton() {
-        showAlert(with: "Forgot your name?", and: "Your name is \(users.userName)")
+        showAlert(with: "Forgot your name?", and: "Your name is \(user.login)")
     }
     
     @IBAction func forgotPasswordButton() {
-        showAlert(with: "Forgot your password?", and: "Try \(users.userPassword)")
+        showAlert(with: "Forgot your password?", and: "Try \(user.password)")
     }
     
     @IBAction func logInButton() {
-        if userNameField.text == users.userName && passwordField.text == users.userPassword {
+        if userNameField.text == user.login && passwordField.text == user.password {
             performSegue(withIdentifier: "showSecondView", sender: nil)
         } else {
             showAlert(with: "OOOPS, incorrect Username or Passord", and: "Please, try again")

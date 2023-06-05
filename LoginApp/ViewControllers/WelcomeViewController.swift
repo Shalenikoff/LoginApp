@@ -13,12 +13,12 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var emojiLabel: UILabel!
     
-    var userName: String!
+    var user: User!
     
     //MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         emojiLabel.text = "\u{2665}"
-        welcomeUserLabel.text = "Welcome, \(userName!)"
+        welcomeUserLabel.text = "Welcome, \(user.personsInfo.fullName)!"
     }
 }
